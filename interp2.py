@@ -4,6 +4,18 @@ import numpy as np
 
 
 def interp2linear(z, xi, yi, extrapval=np.nan):
+
+    """
+    Linear interpolation equivalent to interp2(z, xi, yi,'linear') in MATLAB
+
+    @param z: function defined on square lattice [0..width(z))X[0..height(z))
+    @param xi: matrix of x coordinates where interpolation is required
+    @param yi: matrix of y coordinates where interpolation is required
+    @param extrapval: value for out of range positions. default is numpy.nan
+    @return: interpolated values in [xi,yi] points
+    @raise Exception:
+    """
+
     x = xi.copy()
     y = yi.copy()
     nrows, ncols = z.shape

@@ -7,7 +7,7 @@ from numpy import nan
 from StringIO import StringIO
 
 
-class MyTestCase(unittest.TestCase):
+class Interp2TestCase(unittest.TestCase):
     def test_interp2linear(self):
         i1 = np.array([
             [0.5, 0., 0.],
